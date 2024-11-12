@@ -68,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
                 List<Student> students = database.studentDao().getAllStudents();
                 StringBuilder displayText = new StringBuilder();
                 for (Student student : students) {
-                    displayText.append("Nama: ").append(student.getNama())
-                            .append(", NIM: ").append(student.getNim())
-                            .append(", Alamat: ").append(student.getAlamat())
-                            .append(", Asal Sekolah: ").append(student.getAsalSekolah())
-                            .append("\n\n");
+                    displayText.append("Nama: ").append(student.getNama()).append("\n")
+                            .append("NIM: ").append(student.getNim()).append("\n")
+                            .append("Alamat: ").append(student.getAlamat()).append("\n")
+                            .append("Asal Sekolah: ").append(student.getAsalSekolah()).append("\n")
+                            .append("\n\n"); // This adds a blank line between each student's details
                 }
 
                 runOnUiThread(new Runnable() {
