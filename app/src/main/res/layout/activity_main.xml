@@ -1,44 +1,88 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
-    <EditText
-        android:id="@+id/editTextNama"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nama" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <EditText
-        android:id="@+id/editTextNIM"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="NIM" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama">
 
-    <EditText
-        android:id="@+id/editTextAlamat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Alamat" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editTextAsalSekolah"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Asal Sekolah" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NIM"
+            android:layout_marginTop="8dp">
 
-    <Button
-        android:id="@+id/buttonSave"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextNIM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewDisplay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Student Data:"
-        android:textSize="18sp" />
-</LinearLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Asal Sekolah"
+            android:layout_marginTop="8dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAsalSekolah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        <!-- ScrollView untuk bagian display text -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:id="@+id/textViewDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Student Data:"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </ScrollView>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
